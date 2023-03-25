@@ -1,0 +1,17 @@
+name = "dynmap-firewall"
+main = "src/index.ts"
+compatibility_date = "2022-11-19"
+workers_dev = false
+usage_model = "unbound"
+routes = ["dynmap.geostyx.com/*"]
+
+[vars]
+ENVIRONMENT = "dev"
+BLOCKASN = "false"
+
+[env.production]
+name = "dynmap-firewall"
+
+[env.production.vars]
+ENVIRONMENT = "prod"
+BLOCKASN = "false"
